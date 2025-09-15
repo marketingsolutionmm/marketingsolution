@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MM MARKETING SOLUTION — Marketing that actually moves the needle</title>
+  $1Data‑driven marketing sprints and simple automations by MM MARKETING SOLUTION in Delaware. We launch ads, build landing pages, and set up CRM workflows that bring customers.$2>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #121318;
+      --ink: #e8eef2;
+      --muted: #a7b0b8;
+      --brand: #5eead4; /* mint */
+      --brand-2: #60a5fa; /* blue */
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html,body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+    a { color: var(--ink); text-decoration: none; }
+    .container { max-width: 1120px; padding: 24px; margin: 0 auto; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 20px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#081018; font-weight:700; box-shadow: var(--shadow); border:none; cursor:pointer; }
+    .btn.secondary { background: transparent; border:1px solid rgba(255,255,255,.15); color: var(--ink); }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.06); color: var(--muted); font-size:12px; }
+    .grid { display:grid; gap:20px; }
+    .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 900px){ .cols-3{ grid-template-columns:1fr; } .cols-2{ grid-template-columns:1fr; } .hero h1{ font-size: 38px; } }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .hero { padding: 64px 0 32px; text-align: center; }
+    .hero h1 { font-size: clamp(40px, 6vw, 56px); line-height:1.05; margin: 12px 0 10px; }
+    .hero p { color: var(--muted); font-size: clamp(16px, 2.5vw, 19px); }
+    .hero .actions { display:flex; justify-content:center; gap:12px; margin-top:22px; flex-wrap:wrap; }
+    header.nav { position: sticky; top:0; backdrop-filter: blur(10px); background: rgba(11,12,16,.65); border-bottom:1px solid rgba(255,255,255,.06); z-index:20; }
+    header .inner { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px; }
+    .brand .logo { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0a0f14; font-weight:900; box-shadow: var(--shadow); }
+    nav a { color: var(--muted); margin: 0 10px; font-size:14px; }
+    section { padding: 48px 0; }
+    h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 8px; }
+    .subhead { color: var(--muted); margin-bottom: 20px; }
+    .list { display:grid; gap:12px; }
+    .list li { display:flex; align-items:flex-start; gap:10px; }
+    .check { width:22px; height:22px; border-radius:6px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); display:inline-grid; place-items:center; color:#0a0f14; font-weight:900; }
+    .badge { font-size:12px; padding:6px 10px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:999px; color: var(--muted); }
+    .footer { color: var(--muted); text-align:center; padding: 32px 0 48px; font-size: 14px; border-top:1px solid rgba(255,255,255,.06); }
+    .kpi { font-size: 36px; font-weight: 800; }
+    .muted { color: var(--muted); }
+    .contact form { display:grid; gap:12px; }
+    input, textarea { width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); color: var(--ink); }
+    label { font-size: 12px; color: var(--muted); }
+    .inline { display:flex; gap:12px; }
+    .inline > * { flex:1; }
+    .note { font-size:12px; color: var(--muted); }
+    .marquee { overflow:hidden; border-radius: var(--radius); border:1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
+    .marquee .row { display:flex; gap:32px; white-space:nowrap; animation: move 30s linear infinite; padding: 14px 16px; color: var(--muted); font-size:14px; }
+    @keyframes move { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  </style>
+</head>
+<body>
+  <!-- QUICK EDITS: Change these to your info -->
+  <!-- COMPANY_NAME: MM MARKETING SOLUTION -->
+  <!-- TAGLINE: Marketing that actually moves the needle -->
+  <!-- PHONE: +1 (555) 000-0000 -->
+  <!-- EMAIL: marketingsolutionmm@gmail.com -->
+  <!-- CITY: Delaware, USA — 16192 Coastal Highway, Lewes, 19958 -->
+  
+  <header class="nav">
+    <div class="container inner">
+      <div class="brand">
+        $1MM$2
+        <div>MM MARKETING SOLUTION</div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+      <a class="btn" href="#contact">Get a proposal</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">⚡ Fast setup • Transparent pricing • Month‑to‑month</span>
+        <h1>Marketing that actually moves the needle</h1>
+        <p>We plan, launch, and scale campaigns that bring you customers — not vanity metrics. Paid ads, content, and simple automations that work together.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Start in 48 hours</a>
+          <a class="btn secondary" href="#services">See what we do</a>
+        </div>
+        <div class="container" style="margin-top:28px">
+          <div class="marquee">
+            <div class="row">Trusted by founders & small teams • Google Ads • Meta Ads • TikTok • SEO basics • Landing pages • Email & SMS • CRM automations • Analytics you can read •</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="subhead">Pick one or combine a few — most clients start with an ad sprint + landing page.</p>
+        <div class="grid cols-3">
+          <div class="card">
+            <span class="badge">Paid Social & Search</span>
+            <h3>Customer‑getting ads</h3>
+            <p class="muted">Full‑funnel campaigns on Google, Meta, and TikTok. Creative, targeting, testing, and weekly optimizations.</p>
+            <ul class="list">
+              <li><span class="check">✓</span>Setup & pixel/Conversions API</li>
+              <li><span class="check">✓</span>3–5 creatives per test</li>
+              <li><span class="check">✓</span>Simple reporting</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="badge">Web & Content</span>
+            <h3>Landing pages that convert</h3>
+            <p class="muted">Fast, clean pages with clear copy. We write, design, and ship — integrated with your analytics.</p>
+            <ul class="list">
+              <li><span class="check">✓</span>Copy & wireframe in 48h</li>
+              <li><span class="check">✓</span>Mobile‑first build</li>
+              <li><span class="check">✓</span>Speed & SEO basics</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="badge">Lifecycle</span>
+            <h3>CRM & automations</h3>
+            <p class="muted">Collect leads and follow up automatically with email/SMS sequences and a tidy CRM.</p>
+            <ul class="list">
+              <li><span class="check">✓</span>Lead capture forms</li>
+              <li><span class="check">✓</span>Welcome & nurture flows</li>
+              <li><span class="check">✓</span>Pipeline dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2>Recent results</h2>
+        <p class="subhead">A snapshot of typical outcomes from 30–60 day sprints.</p>
+        <div class="grid cols-3">
+          <div class="card"><div class="kpi">+240%</div><div class="muted">Lead volume in 6 weeks (local services)</div></div>
+          <div class="card"><div class="kpi">$9.80</div><div class="muted">Cost per lead after creative testing</div></div>
+          <div class="card"><div class="kpi">3.1x</div><div class="muted">ROAS on search with better intent filters</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container grid cols-2 card">
+        <div>
+          <h2>How we work</h2>
+          <p class="subhead">Clarity first, then momentum. No long contracts.</p>
+          <ul class="list">
+            <li><span class="check">✓</span><strong>Discovery (30 min):</strong> goals, offer, audience.</li>
+            <li><span class="check">✓</span><strong>Sprint plan (24h):</strong> channel picks, budget, KPIs.</li>
+            <li><span class="check">✓</span><strong>Build (2–5 days):</strong> ads + landing + tracking.</li>
+            <li><span class="check">✓</span><strong>Optimize (weekly):</strong> tests, learnings, scale.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Guarantee</h2>
+          <p class="subhead">If we don’t ship measurable improvements in 30 days, you don’t pay the next month.</p>
+          <div class="card" style="background:linear-gradient(180deg, rgba(94,234,212,.15), rgba(96,165,250,.15)); border-color: rgba(94,234,212,.35);">
+            <p><strong>Founder‑led.</strong> You’ll speak with a marketer, not an account bot. We keep it lean and focused on outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <p class="subhead">Start small, prove results, scale when it works.</p>
+        <div class="grid cols-3">
+          <div class="card">
+            <span class="badge">Kickoff</span>
+            <h3>Ad Sprint</h3>
+            <p class="muted">One channel, one landing page, weekly reporting.</p>
+            <h3>$1,500 / month</h3>
+            <p class="note">Ad spend billed separately.</p>
+          </div>
+          <div class="card" style="border-color: rgba(94,234,212,.4); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(94,234,212,.08));">
+            <span class="badge">Most popular</span>
+            <h3>Growth</h3>
+            <p class="muted">Two channels, landing + email, CRO tests.</p>
+            <h3>$2,800 / month</h3>
+            <p class="note">Ad spend billed separately.</p>
+          </div>
+          <div class="card">
+            <span class="badge">Scale</span>
+            <h3>Performance</h3>
+            <p class="muted">Multi‑channel + content, weekly experiments, dashboards.</p>
+            <h3>$4,500 / month</h3>
+            <p class="note">Ad spend billed separately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get a proposal</h2>
+        <p class="subhead">Tell us a bit about your business and we’ll send a plan in 24 hours.</p>
+        <div class="grid cols-2">
+          <div class="card">
+            <form onsubmit="event.preventDefault(); window.location.href='mailto:marketingsolutionmm@gmail.com?subject=Project%20Inquiry&body=' + encodeURIComponent(document.getElementById('msg').value);">
+              <div class="inline">
+                <div>
+                  <label>Your name</label>
+                  <input placeholder="Jane Founder" required />
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input placeholder="you@company.com" type="email" required />
+                </div>
+              </div>
+              <div class="inline">
+                <div>
+                  <label>Company</label>
+                  <input placeholder="Acme Co" />
+                </div>
+                <div>
+                  <label>Budget (monthly)</label>
+                  <input placeholder="$2,000 – $5,000" />
+                </div>
+              </div>
+              <div>
+                <label>What do you want to achieve?</label>
+                <textarea id="msg" rows="5" placeholder="e.g., Book 50 demo calls a month, launch a new product, fix tracking…"></textarea>
+              </div>
+              <button class="btn" type="submit">Email us</button>
+              <p class=\"note\">We’ll reply to your email within 24 hours.</p>
+            </form>
+          </div>
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="muted">marketingsolutionmm@gmail.com<br/>Delaware, USA — 16192 Coastal Highway, Lewes, 19958</p>
+            <h3 style="margin-top:16px">FAQ</h3>
+            <ul class="list">
+              <li><span class="check">✓</span>Month‑to‑month with a 14‑day notice.</li>
+              <li><span class="check">✓</span>You own all ad accounts and assets.</li>
+              <li><span class="check">✓</span>We meet weekly with tidy action items.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="terms" class="legal">
+      <div class="container">
+        <div class="card">
+          <h2>Terms of Service</h2>
+          <p class="subhead">Last updated: <span id="terms-date"></span></p>
+          <h3>1. Who we are</h3>
+          <p>MM MARKETING SOLUTION ("we", "us", "our") provides marketing strategy, advertising, landing page design, analytics, and automation services. Our business address is 16192 Coastal Highway, Lewes, Delaware 19958, USA. Contact: marketingsolutionmm@gmail.com.</p>
+          <h3>2. Acceptance of terms</h3>
+          <p>By requesting, purchasing, or using our services, you agree to these Terms. If you are entering into this agreement on behalf of a company, you represent that you have authority to bind that company.</p>
+          <h3>3. Services & deliverables</h3>
+          <p>We operate on sprint‑based engagements. Specific scope, timelines, and deliverables are defined in your proposal or statement of work (SOW). Minor adjustments may be made by mutual written agreement (including email).</p>
+          <h3>4. Fees, invoicing & taxes</h3>
+          <p>Service fees are due as stated in your SOW or invoice. Ad spend is always billed directly by the ad platforms unless otherwise agreed. Fees are exclusive of applicable taxes, which are your responsibility.</p>
+          <h3>5. Client responsibilities</h3>
+          <ul class="list">
+            <li><span class="check">✓</span>Provide timely access to accounts, assets, approvals, and knowledgeable stakeholders.</li>
+            <li><span class="check">✓</span>Warrant that any materials you supply (logos, copy, images, data) do not infringe third‑party rights and comply with applicable laws and platform policies.</li>
+            <li><span class="check">✓</span>Maintain your own compliance with privacy, consumer protection, and industry regulations.</li>
+          </ul>
+          <h3>6. Intellectual property</h3>
+          <p>You retain ownership of materials you provide. Upon full payment, we grant you a non‑exclusive, perpetual license to use the deliverables for your business. Our pre‑existing methods, templates, and know‑how remain our own.</p>
+          <h3>7. Confidentiality</h3>
+          <p>Each party will protect the other’s confidential information and use it only to perform obligations under the SOW. This duty survives termination.</p>
+          <h3>8. Data processing</h3>
+          <p>To the extent we process personal data on your behalf, we act as a service provider/processor and will process such data only per your instructions and applicable law. You are responsible for having a lawful basis for processing and for providing required notices to your users.</p>
+          <h3>9. Warranties & disclaimers</h3>
+          <p>Marketing performance depends on many factors outside our control. We do not warrant specific results (e.g., sales, leads, rankings). Except as expressly stated, services are provided “as is.”</p>
+          <h3>10. Limitation of liability</h3>
+          <p>To the maximum extent permitted by law, neither party is liable for any indirect, incidental, special, consequential, or punitive damages, or lost profits. Our aggregate liability under any SOW is limited to the fees you paid to us in the three (3) months preceding the claim.</p>
+          <h3>11. Indemnity</h3>
+          <p>You agree to indemnify and hold us harmless from claims arising out of your products, your misuse of the services, or materials you supply.</p>
+          <h3>12. Term, renewal & termination</h3>
+          <p>Either party may terminate an engagement as stated in the SOW or, if not specified, on 14 days’ written notice. You will pay for work performed up to termination and any non‑cancelable third‑party costs.</p>
+          <h3>13. Governing law & disputes</h3>
+          <p>These Terms are governed by the laws of the State of Delaware, without regard to conflict of law rules. Disputes will be resolved by good‑faith negotiation; failing that, exclusive jurisdiction and venue lie in the state and federal courts located in Delaware.</p>
+          <h3>14. Changes to these Terms</h3>
+          <p>We may update these Terms from time to time. Material changes will be indicated by updating the “Last updated” date below.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="legal">
+      <div class="container">
+        <div class="card">
+          <h2>Privacy Policy</h2>
+          <p class="subhead">Last updated: <span id="privacy-date"></span></p>
+          <h3>1. Overview</h3>
+          <p>This Privacy Policy explains how MM MARKETING SOLUTION ("we", "us") collects, uses, and shares personal information when you visit our website, contact us, or use our services.</p>
+          <h3>2. Who is responsible</h3>
+          <p>Controller: MM MARKETING SOLUTION, 16192 Coastal Highway, Lewes, Delaware 19958, USA. Contact: marketingsolutionmm@gmail.com.</p>
+          <h3>3. Information we collect</h3>
+          <ul class="list">
+            <li><span class="check">✓</span><strong>Contact data</strong> (name, email, company, phone if provided) when you submit forms or contact us.</li>
+            <li><span class="check">✓</span><strong>Business data</strong> you share for scoping work (industry, budgets, goals).</li>
+            <li><span class="check">✓</span><strong>Usage data</strong> such as IP address, device/browser, pages visited, and interactions, collected via cookies or analytics tools.</li>
+          </ul>
+          <h3>4. How we use information</h3>
+          <p>We use information to: respond to inquiries; provide and improve services; perform analytics; personalize communications; comply with legal obligations; and protect our rights.</p>
+          <h3>5. Legal bases / grounds</h3>
+          <p>We process personal information with your consent, to perform a contract or take steps at your request prior to entering a contract, to comply with legal obligations, and for our legitimate interests (e.g., securing our services, measuring effectiveness).</p>
+          <h3>6. Sharing of information</h3>
+          <p>We may share information with service providers (hosting, analytics, advertising platforms, CRM) under contracts that protect your data; with authorities when required by law; and during business transfers (e.g., merger or acquisition).</p>
+          <h3>7. International transfers</h3>
+          <p>If we transfer data across borders, we use appropriate safeguards as required by applicable laws.</p>
+          <h3>8. Retention</h3>
+          <p>We keep personal information only as long as necessary for the purposes described or as required by law, then delete or anonymize it.</p>
+          <h3>9. Security</h3>
+          <p>We implement reasonable technical and organizational measures to protect personal information. No method of transmission or storage is 100% secure.</p>
+          <h3>10. Your choices</h3>
+          <ul class="list">
+            <li><span class="check">✓</span>You can opt out of marketing emails at any time by contacting us.</li>
+            <li><span class="check">✓</span>You can disable non‑essential cookies in your browser settings.</li>
+            <li><span class="check">✓</span>You may request access, correction, or deletion of your personal information where applicable law provides these rights.</li>
+          </ul>
+          <h3>11. Children</h3>
+          <p>Our services are not directed to children under 13, and we do not knowingly collect personal information from children.</p>
+          <h3>12. Contact</h3>
+          <p>Questions or requests? Email us at marketingsolutionmm@gmail.com.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> MM MARKETING SOLUTION — All rights reserved. · <a href="#terms">Terms</a> · <a href="#privacy">Privacy</a></div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    var d = new Date().toISOString().slice(0,10);
+    var t = document.getElementById('terms-date'); if (t) t.textContent = d;
+    var p = document.getElementById('privacy-date'); if (p) p.textContent = d;
+  </script>
+</body>
+</html>
