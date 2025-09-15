@@ -57,6 +57,17 @@
     .marquee .row { display:flex; gap:32px; white-space:nowrap; animation: move 30s linear infinite; padding: 14px 16px; color: var(--muted); font-size:14px; }
     @keyframes move { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   </style>
+  <meta property="og:title" content="MM MARKETING SOLUTION — Marketing that actually moves the needle">
+  <meta property="og:description" content="Data‑driven marketing sprints and simple automations. Based in Delaware, USA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marketingsolutionmm.github.io/marketingsolution/">
+  <meta property="og:image" content="https://marketingsolutionmm.github.io/marketingsolution/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MM MARKETING SOLUTION — Marketing that actually moves the needle">
+  <meta name="twitter:description" content="Data‑driven marketing sprints and simple automations. Based in Delaware, USA.">
+  <meta name="twitter:image" content="https://marketingsolutionmm.github.io/marketingsolution/og-image.png">
 </head>
 <body>
   <!-- QUICK EDITS: Change these to your info -->
@@ -211,34 +222,53 @@
         <p class="subhead">Tell us a bit about your business and we’ll send a plan in 24 hours.</p>
         <div class="grid cols-2">
           <div class="card">
-            <form onsubmit="event.preventDefault(); window.location.href='mailto:marketingsolutionmm@gmail.com?subject=Project%20Inquiry&body=' + encodeURIComponent(document.getElementById('msg').value);">
-              <div class="inline">
-                <div>
-                  <label>Your name</label>
-                  <input placeholder="Jane Founder" required />
-                </div>
-                <div>
-                  <label>Email</label>
-                  <input placeholder="you@company.com" type="email" required />
-                </div>
-              </div>
-              <div class="inline">
-                <div>
-                  <label>Company</label>
-                  <input placeholder="Acme Co" />
-                </div>
-                <div>
-                  <label>Budget (monthly)</label>
-                  <input placeholder="$2,000 – $5,000" />
-                </div>
-              </div>
-              <div>
-                <label>What do you want to achieve?</label>
-                <textarea id="msg" rows="5" placeholder="e.g., Book 50 demo calls a month, launch a new product, fix tracking…"></textarea>
-              </div>
-              <button class="btn" type="submit">Email us</button>
-              <p class=\"note\">We’ll reply to your email within 24 hours.</p>
-            </form>
+            <form onsubmit="event.preventDefault();
+  var name = (document.getElementById('name')||{}).value||'';
+  var email = (document.getElementById('email')||{}).value||'';
+  var company = (document.getElementById('company')||{}).value||'';
+  var budget = (document.getElementById('budget')||{}).value||'';
+  var msg = (document.getElementById('msg')||{}).value||'';
+  var subject = encodeURIComponent('Project Inquiry from ' + name);
+  var body = encodeURIComponent('Name: ' + name + '
+Email: ' + email + '
+Company: ' + company + '
+Budget: ' + budget + '
+
+Goals:
+' + msg);
+  var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=marketingsolutionmm@gmail.com&su=' + subject + '&body=' + body;
+  var mailto = 'mailto:marketingsolutionmm@gmail.com?subject=' + subject + '&body=' + body;
+  var w = window.open(gmail, '_blank');
+  if (!w) { window.location.href = mailto; }
+  var note = document.getElementById('form-note'); if (note) { note.textContent = "If Gmail didn't open, your browser may have blocked the pop-up. We also tried your default mail app."; }
+">
+  <div class="inline">
+    <div>
+      <label>Your name</label>
+      <input id="name" name="name" placeholder="Jane Founder" required />
+    </div>
+    <div>
+      <label>Email</label>
+      <input id="email" name="email" placeholder="you@company.com" type="email" required />
+    </div>
+  </div>
+  <div class="inline">
+    <div>
+      <label>Company</label>
+      <input id="company" name="company" placeholder="Acme Co" />
+    </div>
+    <div>
+      <label>Budget (monthly)</label>
+      <input id="budget" name="budget" placeholder="$2,000 – $5,000" />
+    </div>
+  </div>
+  <div>
+    <label>What do you want to achieve?</label>
+    <textarea id="msg" name="message" rows="5" placeholder="e.g., Book 50 demo calls a month, launch a new product, fix tracking…"></textarea>
+  </div>
+  <button class="btn" type="submit">Email us</button>
+  <p id="form-note" class="note">This opens Gmail in a new tab. If blocked, your default mail app will be used.</p>
+</form>
           </div>
           <div class="card">
             <h3>Contact</h3>
